@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Albom = () => {
+const Album = () => {
   return (
     <div>
       Hello from Albom
@@ -8,4 +8,4 @@ const Albom = () => {
   )
 }
 
-export default Albom
+export default Album

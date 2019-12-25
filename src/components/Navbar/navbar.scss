@@ -1,0 +1,64 @@
+@import '../styleAbstracts/vars.scss';
+.nav-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $nav-bar-width;
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .5s;
+    &__soc-media{
+        height: 10vh;
+        display: flex;
+        font-size: $heading-font-size;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        list-style: none;
+
+    }
+    .logo{
+        height:5vh;
+        text-align: center;
+        font-size: 2rem;
+        
+    }
+    
+    &--active{
+
+    }
+    &__buttons{
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        &--batton{
+            width: 100%;
+            padding: 2rem 0 2rem 6rem;
+            list-style: none;
+            font-size:$sec-font-size;
+            font-family: $main-font-family;
+            a{
+                position: relative;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+            & > *{
+                color: black;
+            }
+        }
+    }
+}
+.icons{
+    position: absolute;
+    top: 0;
+    left: -40px;
+}
+.nav-bar.active{
+    width: 4vw !important;
+}
