@@ -3,9 +3,9 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: $nav-bar-width;
+    width: 4vh;
     height: 100vh;
-    background-color: green;
+    background-image:$nav-bgi-gradient;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -20,15 +20,18 @@
 
     }
     .logo{
-        height:5vh;
         text-align: center;
         font-size: 2rem;
-        
+        font-family: $logo-font-family;
+        background-image:linear-gradient(to right bottom,#FF5F6D,#FFC371);
+        background-clip: text;
+        h1{
+            padding:2rem 0;
+            color: transparent;
+        }
     }
     
-    &--active{
-
-    }
+    
     &__buttons{
         width: 100%;
         flex-grow: 1;
@@ -36,29 +39,49 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-
         &--batton{
             width: 100%;
             padding: 2rem 0 2rem 6rem;
             list-style: none;
             font-size:$sec-font-size;
             font-family: $main-font-family;
+            position: relative;
+            overflow: hidden;
+            &::before{
+                content: ' ';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-image:linear-gradient(to right bottom,#FF5F6D,#FFC371);
+                transform: translateX(-110%);
+                transition: .5s;
+                opacity: 0;
+            }
+            &:hover::before{
+                transform: translateX(0%);
+                opacity: 1;
+            }
             a{
                 position: relative;
                 text-decoration: none;
                 text-transform: uppercase;
             }
             & > *{
-                color: black;
+                color: white;
             }
+            
         }
     }
 }
 .icons{
     position: absolute;
-    top: 0;
-    left: -40px;
+    top: 60%;
+    left: -45px;
+    font-size: 2.6rem;
+    transform: translateY(-50%);
 }
 .nav-bar.active{
-    width: 4vw !important;
+    width: $nav-bar-width !important;
 }

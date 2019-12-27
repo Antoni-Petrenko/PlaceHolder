@@ -1,5 +1,4 @@
 import { IoMdMenu } from "react-icons/io";
-
 import React,{useContext} from 'react';
 import Context from '../context';
 import './menuButton.scss';

@@ -9,11 +9,11 @@ import './navbar.scss';
 const NavBar = () => {
     const {navActive}=useContext(Context);
   return (
-    <nav className={navActive?"nav-bar":"nav-bar active"}>
-        <div className="logo">{navActive?<h1>{`<MyApp/>`}</h1>:null}</div>
+    <nav className={navActive?"nav-bar active":"nav-bar"}>
+        <div className="logo">{navActive?<h1>{`<MyApp/>`}</h1>:<h1>{`M`}</h1>}</div>
         <ul className="nav-bar__buttons">
             <li className="nav-bar__buttons--batton">
-                <NavLink to='/'>
+                <NavLink exact to='/'>
                     <span className='icons'><FaHome/></span> Home
                 </NavLink>
             </li>
