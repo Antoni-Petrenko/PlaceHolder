@@ -4,10 +4,10 @@ import Context from '../context';
 import './menuButton.scss';
 
 const MenuButton = () => {
-const {navActive,changeNavActiv}=useContext(Context);
+const {changeNavActiv}=useContext(Context);
   return (
     <div className='menu-button' onClick={changeNavActiv}>
-      <IoMdMenu/>
+      <IoMdMenu color='#FFC371'/>
     </div>
   )
 }

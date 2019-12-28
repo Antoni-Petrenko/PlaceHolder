@@ -11,46 +11,48 @@ const NavBar = () => {
   return (
     <nav className={navActive?"nav-bar active":"nav-bar"}>
         <div className="logo">{navActive?<h1>{`<MyApp/>`}</h1>:<h1>{`M`}</h1>}</div>
+
         <ul className="nav-bar__buttons">
-            <li className="nav-bar__buttons--batton">
-                <NavLink exact to='/'>
-                    <span className='icons'><FaHome/></span> Home
+            <li>
+                <NavLink className="nav-bar__buttons--button" exact to='/'>
+                    <FaHome className='icons'/><span>Home</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/albums'>
-                    <span className='icons'><IoIosAlbums/></span>albums
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/albums'>
+                    <IoIosAlbums className='icons'/><span>albums</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/comments'>
-                    <span className='icons'><FaCommentAlt/></span>comments
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/comments'>
+                    <FaCommentAlt className='icons'/><span>comments</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/photos'>
-                    <span className='icons'><IoMdPhotos/></span>photos
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/photos'>
+                   <IoMdPhotos className='icons'/><span>photos</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/posts'>
-                    <span className='icons'><MdLocalPostOffice/></span>posts
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/posts'>
+                    <MdLocalPostOffice className='icons'/><span>posts</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/todos'>
-                    <span className='icons'><IoIosWarning/></span>todos
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/todos'>
+                    <IoIosWarning className='icons'/><span>todos</span>
                 </NavLink>
             </li>
-            <li className="nav-bar__buttons--batton">
-                <NavLink to='/users'>
-                    <span className='icons'><FaUsers/></span>users
+            <li>
+                <NavLink className="nav-bar__buttons--button" to='/users'>
+                    <FaUsers className='icons'/><span>users</span>
                 </NavLink>
             </li>
         </ul>
         <ul className="nav-bar__soc-media">
-            <li><span><FaGithub/></span></li>
-            <li><span><FaLinkedin/></span></li>
+            <li><a href="https://github.com/Antoni-Petrenko"><span><FaGithub color='white'/></span></a></li>
+            <li>
+                <a href="https://www.linkedin.com/feed/"><span><FaLinkedin color='white'/></span></a></li>
         </ul>
     </nav>
   )

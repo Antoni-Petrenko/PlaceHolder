@@ -25,8 +25,9 @@ function changeNavActiv(){
       <Context.Provider value={{navActive,changeNavActiv}}>
       <NavBar/>
       <MenuButton />
-      <div className={navActive?"main-space activeNav":"main-space"}>
+      <div onClick={navActive? changeNavActiv:null} className={navActive?"main-space activeNav":"main-space"}>
           <Switch>
+
             <Route exact path="/" component={Home} />
             <Route path="/albums" component={Album}/>
             <Route exact path="/comments" component={Comments} />
@@ -34,6 +35,8 @@ function changeNavActiv(){
             <Route path="/posts" component={Posts}/>
             <Route exact path="/todos" component={Todos} />
             <Route path="/users" component={Users}/>
+
+
           </Switch>
       </div>
       </Context.Provider>
