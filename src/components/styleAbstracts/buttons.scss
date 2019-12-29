@@ -1,0 +1,18 @@
+.btn{
+    &:link,&:visited{
+        display: inline-block;
+        margin-top: 3rem;
+        padding: 2rem 4rem;
+        background-image: $main-color-gradient;
+        border-radius: 100px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        font-size: 1.6rem;
+        font-family:$main-font-family ;
+    }
+    span{
+        margin-left:1.2rem;
+    }
+   
+}

@@ -11,23 +11,24 @@ import Users from './users/Users';
 import Photos from './photos/Photos';
 import MenuButton from './menubutton/MenuButton';
 import Context from './context';
+import navOptions from './appOptions';
 
 function App() {
   let [navActive,setNavActive]=useState(false);
+
 
 function changeNavActiv(){
   navActive=!navActive;
   setNavActive(navActive);
 }
 
-  return (
+return (
     <div className="wrapper">
-      <Context.Provider value={{navActive,changeNavActiv}}>
+      <Context.Provider value={{navActive,changeNavActiv,navOptions}}>
       <NavBar/>
       <MenuButton />
       <div onClick={navActive? changeNavActiv:null} className={navActive?"main-space activeNav":"main-space"}>
-          <Switch>
-
+        <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/albums" component={Album}/>
             <Route exact path="/comments" component={Comments} />
@@ -35,9 +36,7 @@ function changeNavActiv(){
             <Route path="/posts" component={Posts}/>
             <Route exact path="/todos" component={Todos} />
             <Route path="/users" component={Users}/>
-
-
-          </Switch>
+        </Switch>
       </div>
       </Context.Provider>
     </div>

@@ -1,0 +1,10 @@
+@import '../styleAbstracts/vars.scss';
+.section-knowleg{
+    margin-top: 10rem;
+   min-height: 100vh; 
+   background-image: url(../img/knowleg-1.jpg),$nav-bgi-gradient ;
+   background-size: cover;
+   background-position: center;
+   background-blend-mode: exclusion;
+   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}

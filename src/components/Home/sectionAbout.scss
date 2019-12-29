@@ -1,0 +1,31 @@
+@import '../styleAbstracts/vars.scss';
+.section-about{
+    padding: 0 1rem;
+    background-color: transparent;
+    &__header-text{
+        text-align: center;
+        font-size: $heading-font-size;
+        font-family: $logo-font-family;
+        font-weight: bolder;
+        background-image: $main-color-gradient;
+        background-clip: text;
+        padding: 3rem 0;
+        h2{
+            color: transparent;
+        }
+    }
+    &__heading-tertiary{
+        font-size:$heading-font-size;
+        font-family: $main-font-family;
+        padding: 2rem 0;
+        
+    }
+    &__btn-box{
+        text-align: center;
+    }
+    &__paragraph{
+        font-size: $sec-font-size;
+        font-family:$main-font-family;
+        
+    }
+}

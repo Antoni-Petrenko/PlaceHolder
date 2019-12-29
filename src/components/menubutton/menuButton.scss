@@ -1,8 +1,9 @@
 
 .menu-button{
-    position:absolute;
+    position:fixed;
     top:0;
     right: 0;
     padding:2rem 2rem 0 0 ;
     font-size:4rem;
+    z-index: 1;
 }

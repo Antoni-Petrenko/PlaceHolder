@@ -1,6 +1,7 @@
-import React from 'react'
+import React,{useEffct} from 'react';
 
 const Album = () => {
+
   return (
     <div>
       Hello from Albom
