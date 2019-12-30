@@ -6,12 +6,13 @@ import {FaGithub,FaLinkedin} from 'react-icons/fa';
 
 const NavBar = () => {
     const {navActive,navOptions}=useContext(Context);
+
   return (
     <nav className={navActive?"nav-bar active":"nav-bar"}>
         <div className="logo">{navActive?<h2>{`<MyApp/>`}</h2>:<h2>{`M`}</h2>}</div>
 
         <ul className="nav-bar__buttons">
-            {navOptions.map(item=>(<NavItem key={item.id} options={item} />)
+            {navOptions.map(item=>(<NavItem key={item.id} options={item}/>)
             )}
         </ul>
         <ul className="nav-bar__soc-media">

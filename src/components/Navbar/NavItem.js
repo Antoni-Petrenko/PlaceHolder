@@ -1,11 +1,15 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import {NavLink} from 'react-router-dom';
-
-const NavItem = ({options}) => {
+import Context from '../context';
+const NavItem = ({options},) => {
+  const {navActive,changeNavActiv}=useContext(Context);
   return (
     <li>
-        <NavLink className="nav-bar__buttons--button" {...(options.url)}>
-        {options.icon}<span>{options.text}</span>
+        <NavLink onClick={()=>(
+            navActive?setTimeout(changeNavActiv,650):null
+          )} 
+          className="nav-bar__buttons--button" {...(options.url)}>
+            {options.icon}<span>{options.text}</span>
         </NavLink>
     </li>
   )
