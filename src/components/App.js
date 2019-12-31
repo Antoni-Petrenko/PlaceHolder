@@ -15,15 +15,7 @@ import navOptions from './appOptions';
 
 function App() {
   let [navActive,setNavActive]=useState(false);
-
-  useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
-  .then(resp=>{
-    if(resp.ok) return resp.text();
-  })
-  .then(jsonData=>localStorage.setItem('ToDos',jsonData));
-  },[])
-
+  
 function changeNavActiv(){
   navActive=!navActive;
   setNavActive(navActive);
